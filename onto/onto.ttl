@@ -1,0 +1,71 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dev: <http:https://dev.univ-paris8.fr/onto/dev#> .
+
+<http:https://dev.univ-paris8.fr/onto/dev#> a owl:Ontology ;
+    dcterms:title "Developpement Durable" .
+
+# C'est un vocabulaire qui tourne autour du développement durable
+
+dev:developpementDurable a rdfs:Class ;
+    rdfs:label "Développement durable"@fr ;
+    rdfs:comment "Politique de développement qui s'efforce de concilier la protection de l'environnement, l'efficience économique et la justice sociale, en vue de répondre aux besoins des générations présentes sans compromettre la capacité des générations futures de satisfaire les leurs."@fr ;
+    rdfs:subClassOf bibo:Durable .
+
+dev:recyclageValorisant a rdfs:Class ;
+    rdfs:label "Recyclage valorisant"@fr ;
+    rdfs:comment "A resource that gives a detailed description of a course of instruction."@fr .
+
+dev:energie a rdf:Property ;
+    rdfs:label "Bâtiment à énergie positive"@fr ;
+    rdfs:comment "Bâtiment bioclimatique conçu pour produire en moyenne plus d'énergie qu'il n'en consomme."@fr ;
+    rdfs:subPropertyOf bibo:Energie .
+
+dev:agroéquipement a rdf:Property ;
+    rdfs:label "agroéquipement"@fr ;
+    rdfs:comment "Bien durable (essentiellement bâtiments et matériels) utilisé pour la production agricole et, éventuellement, la transformation de produits agricoles."@fr .
+
+dev:diatomiste a rdf:Property ;
+    rdfs:label "Diatomiste"@fr ;
+    rdfs:comment "Hydrobiologiste spécialiste des diatomées. Les diatomées sont des algues brunes unicellulaires, utilisées notamment comme indicateurs de la qualité de l’eau."@fr ;
+    rdfs:subPropertyOf dcterms:format .
+
+dev:agroforesterie a rdf:Property ;
+    rdfs:label "agroforesterie"@fr ;
+    rdfs:comment "Mode de production agricole associant sur une même parcelle des plantations d’arbres à d’autres cultures, dans la perspective d’effets bénéfiques réciproques."@fr .
+
+dev:autoconsommation a rdf:Property ;
+    rdfs:label "autoconsommation"@fr ;
+    rdfs:comment "Consommation de biens ou de services par celui qui les produit."@fr .
+
+dev:Doc a rdf:Property ;
+    rdfs:label "Doc" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+dev:Rapport a rdf:Property ;
+    rdfs:label "Rapport" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+dev:Concept a rdf:Property ;
+    rdfs:label "Concept" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+dev:economieVerte a rdf:Property ;
+    rdfs:label "Economie verte"@fr ;
+    rdfs:comment "Économie caractérisée par des investissements et des dispositions techniques qui visent à éviter, à réduire ou à supprimer les pollutions et, en particulier, les émissions de dioxyde de carbone, tout en utilisant au mieux les ressources énergétiques disponibles. Les innovations liées à l'économie verte favorisent la création d'emplois."@fr ;
+    rdfs:subPropertyOf bibo:content .
+
+dev:economieCirculaire a rdf:Property ;
+    rdfs:label "Economie circulaire"@fr ;
+    rdfs:comment "Organisation d’activités économiques et sociales recourant à des modes de production, de consommation et d’échange fondés sur l’écoconception, la réparation, le réemploi et le recyclage, et visant à diminuer les ressources utilisées ainsi que les dommages causés à l’environnement."@fr ;
+    rdfs:subPropertyOf dcterms:extent .
+
+
+
